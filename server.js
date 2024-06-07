@@ -6,7 +6,7 @@ import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
 import indexRouter from "./routes/index.js";
-
+import notesRouter from "./routes/notes.js";
 // Constants
 const port = process.env.PORT || 3000;
 
@@ -24,6 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join("public")));
 
 app.use("/", indexRouter);
+app.use("/notes", notesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
