@@ -9,7 +9,7 @@ block content
         li
           div= note.text
           button.delete-btn(type="button" data-id=note.id) Delete
-          button.edit-btn(type="button" data-id=note.id) Save
+          button.edit-btn(type="button" data-id=note.id) Edit
 
     form(method="POST" action="notes")
       input(type="text", name="noteText", placeholder="Add a new note here!")
